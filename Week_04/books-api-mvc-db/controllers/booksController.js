@@ -65,6 +65,18 @@ const deleteBook = async (req, res) => {
     res.status(500).send("Error deleting book");
   }
 };
+//Booksearch logic:
+//const searchBooks = async (req, res) => {
+ // const searchTerm = req.query.searchTerm;
+ // try {
+   // const books = await Book.searchBooks(searchTerm);
+   // res.json(books);
+  //} catch (error) {
+   // console.error(error);
+    //res.status(500).send("Error searching for books");
+ // }
+//};
+
 
 module.exports = {
   getAllBooks,
@@ -72,4 +84,5 @@ module.exports = {
   createBook,
   updateBook,
   deleteBook,
+//searchBooks,
 };

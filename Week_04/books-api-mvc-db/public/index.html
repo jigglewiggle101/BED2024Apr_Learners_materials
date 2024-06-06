@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Books App</title>
-    <link rel="stylesheet" href="styles/styles.css" />
-  </head>
-  <body>
-    <h1>Books API</h1>
-    <section id="book-list"></section>
-    <script src="scripts/script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books App</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <h1>Books API</h1>
+
+  <!-- Form to create a new book -->
+  <section id="new-book-form">
+    <h2>Add a New Book</h2>
+    <form id="add-book-form">
+      <input type="text" id="new-title" placeholder="Title" required>
+      <input type="text" id="new-author" placeholder="Author" required>
+      <button type="submit">Add Book</button>
+    </form>
+  </section>
+
+  <!-- Section to display the list of books -->
+  <section id="book-list"></section>
+
+  <!-- Form to update an existing book (hidden by default) -->
+  <section id="update-book-form" style="display: none;"></section>
+    <h2>Update Book</h2>
+    <form id="edit-book-form">
+      <input type="hidden" id="edit-id">
+      <input type="text" id="edit-title" placeholder="Title" required>
+      <input type="text" id="edit-author" placeholder="Author" required>
+      <button type="submit">Update Book</button>
+    </form>
+  </section>
+
+  <script src="scripts/script.js"></script>
+</body>
 </html>

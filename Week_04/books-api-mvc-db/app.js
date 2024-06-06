@@ -19,6 +19,7 @@ app.use(staticMiddleware); // Mount the static middleware
 // Routes for GET requests books (replace with appropriate routes for update and delete later)
 app.get("/books", booksController.getAllBooks);
 app.get("/books/:id", booksController.getBookById);
+// booksearch logic: app.get("/books/search", booksController.searchBooks);
 app.post("/books", validateBook, booksController.createBook); // POST for creating books (can handle JSON data)
 app.put("/books/:id", validateBook, booksController.updateBook); // PUT for updating books
 app.delete("/books/:id", booksController.deleteBook); // DELETE for deleting books

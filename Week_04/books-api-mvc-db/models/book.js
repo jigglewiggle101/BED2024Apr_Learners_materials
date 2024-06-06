@@ -90,6 +90,19 @@ class Book {
     
         return result.rowsAffected > 0; // Indicate success based on affected rows
     }
+
+    // booksearch logic: static async searchBooks(searchTerm) {
+     // const connection = await sql.connect(dbConfig);
+      //const sqlQuery = `
+        //SELECT * FROM Books
+       // WHERE title LIKE @searchTerm OR author LIKE @searchTerm
+     // `;
+     // const request = connection.request();
+     // request.input("searchTerm", sql.NVarChar, `%${searchTerm}%`);
+    //  const result = await request.query(sqlQuery);
+     // connection.close();
+    //  return result.recordset.map(row => new Book(row.id, row.title, row.author));
+   // }
   }
   
   module.exports = Book;
